@@ -7,7 +7,7 @@ import { React, useState } from "react";
 const CreateTask = ({ show, onHide, saveTask }) => {
   const [taskName, setTaskName] = useState("");
   const [desc, setDesc] = useState("");
-  const [complete, setComplete] = useState(false);
+  // const [complete, setComplete] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,7 +27,7 @@ const CreateTask = ({ show, onHide, saveTask }) => {
     let taskObj = {};
     taskObj["name"] = taskName;
     taskObj["des"] = desc;
-    taskObj["isComplete"] = complete;
+    // taskObj["isComplete"] = complete;
     saveTask(taskObj);
 
     // localStorage.setItem('savedTask', JSON.stringify(taskObj));
